@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://ccfdwytla602b"]
+
+[ext_resource type="PackedScene" uid="uid://djlfx47nrplvh" path="res://Spys/Spy1.tscn" id="1_73cnc"]
+
+[node name="World" type="Node2D"]
+
+[node name="Spy1" parent="." instance=ExtResource("1_73cnc")]
+position = Vector2(379, 242)
