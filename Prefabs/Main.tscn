@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=3 uid="uid://c7qnt1j4qakyc"]
+
+[ext_resource type="Script" path="res://Scripts/Main.gd" id="1_atvwo"]
+
+[node name="Main" type="CanvasLayer"]
+script = ExtResource("1_atvwo")
+
+[node name="MainMenu" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="PlayButton" type="Button" parent="MainMenu"]
+offset_left = 120.0
+offset_top = 200.0
+offset_right = 420.0
+offset_bottom = 336.0
+text = "Play"
+
+[node name="QuitButton" type="Button" parent="MainMenu"]
+offset_left = 740.0
+offset_top = 200.0
+offset_right = 1040.0
+offset_bottom = 336.0
+text = "Quit"
+
+[connection signal="pressed" from="MainMenu/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="MainMenu/QuitButton" to="." method="_on_quit_button_pressed"]

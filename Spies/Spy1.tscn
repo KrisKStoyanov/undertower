@@ -1,41 +1,41 @@
 [gd_scene load_steps=13 format=3 uid="uid://djlfx47nrplvh"]
 
-[ext_resource type="Script" path="res://Spys/spy_1.gd" id="1_8ysar"]
-[ext_resource type="Texture2D" uid="uid://b01h0822hpof1" path="res://Game assets/Spy1FrontWalk.png" id="2_gx6v2"]
+[ext_resource type="Script" path="res://Scripts/spy_1.gd" id="1_8w2gc"]
+[ext_resource type="Texture2D" uid="uid://b01h0822hpof1" path="res://Assets/Spy1FrontWalk.png" id="2_fxofb"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_877ol"]
 height = 38.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xug1g"]
-atlas = ExtResource("2_gx6v2")
+atlas = ExtResource("2_fxofb")
 region = Rect2(1, 0, 31, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_r23rs"]
-atlas = ExtResource("2_gx6v2")
+atlas = ExtResource("2_fxofb")
 region = Rect2(32, 0, 31, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kaxga"]
-atlas = ExtResource("2_gx6v2")
+atlas = ExtResource("2_fxofb")
 region = Rect2(63, 0, 31, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ukgir"]
-atlas = ExtResource("2_gx6v2")
+atlas = ExtResource("2_fxofb")
 region = Rect2(94, 0, 31, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cdji8"]
-atlas = ExtResource("2_gx6v2")
+atlas = ExtResource("2_fxofb")
 region = Rect2(1, 32, 31, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tk5fw"]
-atlas = ExtResource("2_gx6v2")
+atlas = ExtResource("2_fxofb")
 region = Rect2(32, 32, 31, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_l1lue"]
-atlas = ExtResource("2_gx6v2")
+atlas = ExtResource("2_fxofb")
 region = Rect2(63, 32, 31, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8f6gr"]
-atlas = ExtResource("2_gx6v2")
+atlas = ExtResource("2_fxofb")
 region = Rect2(94, 32, 31, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_q8vym"]
@@ -71,13 +71,16 @@ animations = [{
 }]
 
 [node name="Spy1" type="CharacterBody2D"]
-script = ExtResource("1_8ysar")
+script = ExtResource("1_8w2gc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(15, 15)
 shape = SubResource("CapsuleShape2D_877ol")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(18, 16)
+position = Vector2(3, 0)
 sprite_frames = SubResource("SpriteFrames_q8vym")
 animation = &"DownWalk"
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+path_max_distance = 5000.0
+debug_enabled = true
