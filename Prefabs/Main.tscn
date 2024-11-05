@@ -12,6 +12,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="PlayButton" type="Button" parent="MainMenu"]
+layout_mode = 0
 offset_left = 120.0
 offset_top = 200.0
 offset_right = 420.0
@@ -19,6 +20,7 @@ offset_bottom = 336.0
 text = "Play"
 
 [node name="QuitButton" type="Button" parent="MainMenu"]
+layout_mode = 0
 offset_left = 740.0
 offset_top = 200.0
 offset_right = 1040.0
